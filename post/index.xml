@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Naf-bloh</title>
-    <link>https://sodiu.me/</link>
-    <description>Recent content on Naf-bloh</description>
+    <title>Posts on Naf-bloh</title>
+    <link>https://sodiu.me/post/</link>
+    <description>Recent content in Posts on Naf-bloh</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Naf</copyright>
     <lastBuildDate>Thu, 30 Nov 2017 22:45:26 +0900</lastBuildDate>
     
-	<atom:link href="https://sodiu.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sodiu.me/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
