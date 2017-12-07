@@ -7,10 +7,32 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Naf</copyright>
-    <lastBuildDate>Thu, 30 Nov 2017 22:45:26 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 08 Dec 2017 06:16:11 +0900</lastBuildDate>
     
 	<atom:link href="https://sodiu.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hostdonを始めて約6ヵ月経ちました</title>
+      <link>https://sodiu.me/post/hostdon-adc-2017/</link>
+      <pubDate>Fri, 08 Dec 2017 06:16:11 +0900</pubDate>
+      
+      <guid>https://sodiu.me/post/hostdon-adc-2017/</guid>
+      <description>Hostdonを始めて約6ヵ月経ちました これはMastodon Advent Calendorの8日目の記事です
+今回のアドベントカレンダーの内容は「GCPに最強のインスタンスを建てる」と「Hostdon」のどっちにしようか、かなり悩んだのですが、Hostdonについて書こうと思います。
+Hostdonってなに？   Hostdonは端的に説明すると、「Mastodonのホスティングサービス」です。 他に株式会社ホープムーンさんのムトー、 Masto.hostがあります。
+改めまして、Hostdonは
+ 速くて(迅速なアップデート) 安くて(324円/月から) オープンソース  を基本理念とした、Mastodonホスティングサービスです。
+  (今は登録停止中です)
+なぜ作ったの？ ITmediaさんの記事にもあるとおり、当時あった「Mastodon会議」なるもので「マストドンは構築が難しくてなかなか始められない」というようなことを聞いたことがあり、手軽にマストドンインスタンスを構築するサービスがあったら良いなぁと思い、作りました。 またそのころムトーさんやMasto.hostもホスティングサービスを始めていて、当時の私は「ホスティングサービスも分散させるべきだ」と考え、このサービスを始めました。 初期は無料だったのですが、やはりお金が厳しく、有料化しました。
+歴史 6月13日 ベータ版としてサービス開始。 6月14日 応募が100人こえてビックリする。 7月頃 請求額に驚く。このころからPassengerに切り替えていった。 8月頃 夏休み期間に決済システムやコントロールパネルを作った。あと電気通信事業者にも登録した。 9月頃 正式サービス開始！ 12月頃 断続的に登録を停止中。(負荷のため)
+技術的なこと 構成図(サーバー台数とかは適当)  Hostdonで動いてるインスタンスはほぼバニラのままです。 改造部分は「投稿画面下のお知らせ欄(iframe式)」ぐらいです。
+また、RailsのサーバーにはPumaではなく、「Passenger(Enterprise)」を使用しています。 これにより、大幅にRAMの使用量を抑えることが可能になりました。 OSS版でも一定の効果が得ることができると思われます。導入の参考にどうぞ PhusionPassengerでMastodonを動かす
+1つのサーバーで複数のインスタンスを動かす際、.env.productionのredisのNamespace設定をしないとTLが混線し、カオスになります。気を付けましょう。 参考: 1つのサーバーで2つのmastodonインスタンスを動かそうとした話とredis周りのバグっぽいなにか
+まとめ わたしは高校生なのですが、4月から、なんとか調べながらインスタンスを建てたり、管理したりすることができるようになってきました。 これからは色々大変な予感がしますが、ちょっとずつReactなどの言語に触れられていけたらなぁと考えています。 内容が薄い気がしますが、読んでくださりありがとうございました。
+追記 今日誕生日です。 Amazon
+今日はガジェオフに参加します。名刺やステッカーが欲しい方はどうぞお声がけください。</description>
+    </item>
     
     <item>
       <title>PhusionPassengerでMastodonを動かす</title>
@@ -20,15 +42,6 @@
       <guid>https://sodiu.me/post/passenger-mstdn/</guid>
       <description>PhusionPassengerでMastodonを動かす 手順 1. PhusionPassengerのインストールとNginxのビルド ※Rubyは直コンパイルを想定しています。 ※centos7 fedora26で動作確認済み ※nginxインストール済みの場合はnginxを一回消して下さい
 gem install passenger cd /usr/local/src curl -L -O https://nginx.org/download/nginx-1.13.3.tar.gz tar xofz nginx-1.13.3.tar.gz cd nginx-1.13.3 ./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib64/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-compat --with-file-aio --with-threads --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_realip_module --with-stream_ssl_module --with-stream_ssl_preread_module --add-module=/usr/local/lib/ruby/gems/2.4.0/gems/passenger-enterprise-server-5.1.8/src/nginx_module make make test make install  これでnginxが/etc/nginx以下にインストールされます。 systemdは以下のように設定すると幸せになれます</description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>https://sodiu.me/post/test/</link>
-      <pubDate>Thu, 30 Nov 2017 22:35:22 +0900</pubDate>
-      
-      <guid>https://sodiu.me/post/test/</guid>
-      <description>  </description>
     </item>
     
   </channel>
