@@ -56,5 +56,26 @@ OSS版でも一定の効果が得ることができると思われます。導�
 gem install passenger cd /usr/local/src curl -L -O https://nginx.org/download/nginx-1.13.3.tar.gz tar xofz nginx-1.13.3.tar.gz cd nginx-1.13.3 ./configure --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib64/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-compat --with-file-aio --with-threads --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_realip_module --with-stream_ssl_module --with-stream_ssl_preread_module --add-module=/usr/local/lib/ruby/gems/2.4.0/gems/passenger-enterprise-server-5.1.8/src/nginx_module make make test make install  これでnginxが/etc/nginx以下にインストールされます。 systemdは以下のように設定すると幸せになれます</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://sodiu.me/post/peertube%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sodiu.me/post/peertube%E3%81%AE%E3%82%B9%E3%82%B9%E3%83%A1/</guid>
+      <description>PeerTubeのススメ Nafです。 PeerTubeを建ててみました。 建てたのはここ 本稿ではPeerTubeのアレソレについて書きます。
+What is &amp;ldquo;PeerTube&amp;rdquo;?  Federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent.
+ (Google翻訳) &amp;gt;P2P（BitTorrent）をWebブラウザでWebTorrentで直接使用するFederated（ActivityPub）ビデオストリーミングプラットフォーム。
+完全に理解した。
+用意したサーバー 他のアプリーケションも同居しているので結構リッチです。
+ さくらのクラウド 石狩リージョン OS: Fedora27 CPU: 4core RAM 4GB SSD 100GB  ちゃんと測っていないのでアレですが、平常時でRAMは200MB程使っているみたいです。
+建て方 ここに書いてます。 ドキュメントが充実しており、簡単に設置・アップデートできると思われます。
+詰まったとこは特にないのですが、nginxをPeertubeユーザーで動かす時のパーミッション設定を忘れずにしましょう。
+利点  ActivityPubを採用しているため、マストドンに流れてくる。  こんな感じで来ます。
+また、動画が埋め込まれるので、Tootの中で動画が見れます。
+ 軽い  最初はエンコードなどで結構重いのかな？と思っていましたが、意外と軽いです。 また、「動画のエンコードを行なうかどうか」という設定があるのでCPUが貧弱なサーバーでも立ち上げれます。 エンコードするならCPUのコア数は2以上がおすすめです。
+気になるところ  60fpsの動画をアップロードできない  Issueにもあるんですが、できません。(30fpsに下げられる) 試しにエンコ無し設定にして上げてみましたが、プチプチになって駄目でした。 今後の開発に期待です。
+まとめ あまり建てている人がいなくて寂しいのでみんな建ててください。ハイ。</description>
+    </item>
+    
   </channel>
 </rss>
