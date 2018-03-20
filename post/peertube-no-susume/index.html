@@ -71,9 +71,9 @@
 
 <h1 id="peertubeのススメ">PeerTubeのススメ</h1>
 
-<p>Nafです。
-<a href="https://github.com/Chocobozzz/PeerTube">PeerTube</a>を建ててみました。
-建てたのは<a href="https://tube.otogamer.me">ここ</a>
+<p>Nafです。<br />
+<a href="https://github.com/Chocobozzz/PeerTube">PeerTube</a>を建ててみました。<br />
+建てたのは<a href="https://tube.otogamer.me">ここ</a><br />
 本稿ではPeerTubeのアレソレについて書きます。</p>
 
 <h2 id="what-is-peertube">What is &ldquo;PeerTube&rdquo;?</h2>
@@ -82,8 +82,11 @@
 <p>Federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent.</p>
 </blockquote>
 
-<p>(Google翻訳)
-&gt;P2P（BitTorrent）をWebブラウザでWebTorrentで直接使用するFederated（ActivityPub）ビデオストリーミングプラットフォーム。</p>
+<p>(Google翻訳)</p>
+
+<blockquote>
+<p>P2P（BitTorrent）をWebブラウザでWebTorrentで直接使用するFederated（ActivityPub）ビデオストリーミングプラットフォーム。</p>
+</blockquote>
 
 <p>完全に理解した。</p>
 
@@ -103,7 +106,7 @@
 
 <h2 id="建て方">建て方</h2>
 
-<p><a href="https://github.com/Chocobozzz/PeerTube/blob/develop/support/doc/production.md">ここ</a>に書いてます。
+<p><a href="https://github.com/Chocobozzz/PeerTube/blob/develop/support/doc/production.md">ここ</a>に書いてます。<br />
 ドキュメントが充実しており、簡単に設置・アップデートできると思われます。</p>
 
 <p>詰まったとこは特にないのですが、nginxを<code>Peertube</code>ユーザーで動かす時のパーミッション設定を忘れずにしましょう。</p>
@@ -126,8 +129,8 @@
 <li>軽い</li>
 </ul>
 
-<p>最初はエンコードなどで結構重いのかな？と思っていましたが、意外と軽いです。
-また、「動画のエンコードを行なうかどうか」という設定があるのでCPUが貧弱なサーバーでも立ち上げれます。
+<p>最初はエンコードなどで結構重いのかな？と思っていましたが、意外と軽いです。<br />
+また、「動画のエンコードを行なうかどうか」という設定があるのでCPUが貧弱なサーバーでも立ち上げれます。<br />
 エンコードするならCPUのコア数は2以上がおすすめです。</p>
 
 <h2 id="気になるところ">気になるところ</h2>
@@ -136,8 +139,8 @@
 <li>60fpsの動画をアップロードできない</li>
 </ul>
 
-<p><a href="https://github.com/Chocobozzz/PeerTube/issues/310">Issue</a>にもあるんですが、できません。(30fpsに下げられる)
-試しにエンコ無し設定にして上げてみましたが、プチプチになって駄目でした。
+<p><a href="https://github.com/Chocobozzz/PeerTube/issues/310">Issue</a>にもあるんですが、できません。(30fpsに下げられる)<br />
+試しにエンコ無し設定にして上げてみましたが、プチプチになって駄目でした。<br />
 今後の開発に期待です。</p>
 
 <h2 id="まとめ">まとめ</h2>

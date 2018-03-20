@@ -18,18 +18,27 @@
       <pubDate>Tue, 20 Mar 2018 17:15:00 +0900</pubDate>
       
       <guid>https://sodiu.me/post/peertube-no-susume/</guid>
-      <description>PeerTubeのススメ Nafです。 PeerTubeを建ててみました。 建てたのはここ 本稿ではPeerTubeのアレソレについて書きます。
+      <description>PeerTubeのススメ Nafです。
+PeerTubeを建ててみました。
+建てたのはここ
+本稿ではPeerTubeのアレソレについて書きます。
 What is &amp;ldquo;PeerTube&amp;rdquo;?  Federated (ActivityPub) video streaming platform using P2P (BitTorrent) directly in the web browser with WebTorrent.
- (Google翻訳) &amp;gt;P2P（BitTorrent）をWebブラウザでWebTorrentで直接使用するFederated（ActivityPub）ビデオストリーミングプラットフォーム。
-完全に理解した。
+ (Google翻訳)
+ P2P（BitTorrent）をWebブラウザでWebTorrentで直接使用するFederated（ActivityPub）ビデオストリーミングプラットフォーム。
+ 完全に理解した。
 用意したサーバー 他のアプリーケションも同居しているので結構リッチです。
  さくらのクラウド 石狩リージョン OS: Fedora27 CPU: 4core RAM 4GB SSD 100GB  ちゃんと測っていないのでアレですが、平常時でRAMは200MB程使っているみたいです。
-建て方 ここに書いてます。 ドキュメントが充実しており、簡単に設置・アップデートできると思われます。
+建て方 ここに書いてます。
+ドキュメントが充実しており、簡単に設置・アップデートできると思われます。
 詰まったとこは特にないのですが、nginxをPeertubeユーザーで動かす時のパーミッション設定を忘れずにしましょう。
 利点  ActivityPubを採用しているため、マストドンに流れてくる。  こんな感じで来ます。
 また、動画が埋め込まれるので、Tootの中で動画が見れます。
- 軽い  最初はエンコードなどで結構重いのかな？と思っていましたが、意外と軽いです。 また、「動画のエンコードを行なうかどうか」という設定があるのでCPUが貧弱なサーバーでも立ち上げれます。 エンコードするならCPUのコア数は2以上がおすすめです。
-気になるところ  60fpsの動画をアップロードできない  Issueにもあるんですが、できません。(30fpsに下げられる) 試しにエンコ無し設定にして上げてみましたが、プチプチになって駄目でした。 今後の開発に期待です。
+ 軽い  最初はエンコードなどで結構重いのかな？と思っていましたが、意外と軽いです。
+また、「動画のエンコードを行なうかどうか」という設定があるのでCPUが貧弱なサーバーでも立ち上げれます。
+エンコードするならCPUのコア数は2以上がおすすめです。
+気になるところ  60fpsの動画をアップロードできない  Issueにもあるんですが、できません。(30fpsに下げられる)
+試しにエンコ無し設定にして上げてみましたが、プチプチになって駄目でした。
+今後の開発に期待です。
 まとめ あまり建てている人がいなくて寂しいのでみんな建ててください。ハイ。</description>
     </item>
     
