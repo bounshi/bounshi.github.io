@@ -7,10 +7,41 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Naf</copyright>
-    <lastBuildDate>Tue, 20 Mar 2018 17:15:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Apr 2018 21:36:49 +0900</lastBuildDate>
     
 	<atom:link href="https://sodiu.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>音ゲ丼が約1周年です</title>
+      <link>https://sodiu.me/post/otogamer-me-1st/</link>
+      <pubDate>Mon, 23 Apr 2018 21:36:49 +0900</pubDate>
+      
+      <guid>https://sodiu.me/post/otogamer-me-1st/</guid>
+      <description>どうも Nafです。
+音ゲ丼ことotogamer.meはドメイン取得日が4月21日、最初のトゥートが4月26日のようです。
+誤字な初トゥート
+ちなみに現在は
+ 総ユーザー数: 376人
+ 投稿数: 45,636 toot
+ 接続インスタンス数: 1,294個
+  らしいです。
+今回は約1周年ということでブログを書くためにArch linuxをデュアルブートしようとしたらその過程で結構詰まり、ブログネタが増えました。
+振り返ってみる 初期のころはほぼ私ぐらいしかおらず、実質お一人様インスタンスだったことを鮮明に覚えています。
+その後、何故か(？？？)新規の方が増えてきて、私がデフォルトの公開範囲を未収載に変えたらアクティブユーザーが(相対的に)増えた気がしてます。
+私の気紛れで色々なことが決まるにもかかわらず、沢山の方に利用して頂き、大変うれしく思います。
+出来た文化(？)  MENDES
+   MENDESとは、beatmaniaIIDX 15 DJ TROOPERSに収録された曲である。俗称「麺です」
+ ニコニコ大百科曰くこうらしいが幤インスタンスでは、その俗称からか主に ラーメン のことを言う。
+稀に変化球として カップラーメン ソース焼きそば その他食べもの 本物のMENDESのリザルト がある。
+ スタバ  主にメシテロ。稀に本物のスタバなときもある。
+また弐寺を設置してあるものもある。
+
+余談だが川崎モアーズ二階のゲーセンはゲーセンしかないのにスタバの案内がある。外階段からスタバに行くのが正攻法らしいが真相は謎である。
+
+おわりに 謎のリンクです
+http://amzn.asia/ePPNP70</description>
+    </item>
     
     <item>
       <title>PeerTubeのススメ</title>
