@@ -7,10 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <copyright>Written by Naf</copyright>
-    <lastBuildDate>Sat, 21 Jul 2018 22:59:54 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 23 Jul 2018 11:15:09 +0900</lastBuildDate>
     
 	<atom:link href="https://sodiu.me/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Misskeyインスタンスを立てる</title>
+      <link>https://sodiu.me/post/how-to-create-misskey/</link>
+      <pubDate>Mon, 23 Jul 2018 11:15:09 +0900</pubDate>
+      
+      <guid>https://sodiu.me/post/how-to-create-misskey/</guid>
+      <description>背景 UIがリッチでActivityPubに対応してるから
+環境 CPU: 1core
+RAM: 1GB
+Disk: 50GB
+OS: Fedora28
+立てる ImageMagickのビルド MisskeyはImageMagick7系を要求します。
+しかしながら、dnfでインストールできるのは6系なのでビルドします。
+依存するパッケージをインストール
+dnf groupinstall &amp;quot;Development tools&amp;quot; dnf install libpng libpng-devel libjpeg libjpeg-devel zlib zlib-devel  公式サイトからソースを落す
+cd /usr/local/src wget https://www.imagemagick.org/download/ImageMagick.tar.gz tar zxf ImageMagick.tar.gz cd ImageMagick  ビルド
+./configure make make install  ※ビルド後、このようにjpegとpngのサポートが入ってるか確認してください。
+convert --version Version: ImageMagick 7.0.8-6 Q16 x86_64 2018-07-11 https://www.imagemagick.org/ Copyright: © 1999-2018 ImageMagick Studio LLC License: https://www.imagemagick.org/script/license.php Features: Cipher DPC HDRI OpenMP Delegates (built-in): jng jpeg png zlib  依存するものたちのインストールと設定 RedisやMongoDBのインストールと設定 dnf install redis mongodb-org mongodb-server systemctl start mongodb redis  Redisのパス設定はしなくてもOKです。(ローカル内に閉じ込めているし)</description>
+    </item>
     
     <item>
       <title>[archlinux] libskkとibus-skkをビルドする</title>
